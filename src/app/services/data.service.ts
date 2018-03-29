@@ -16,7 +16,7 @@ export class DataService {
     ]
   }
 
-  getTasks(): Faktura[] {
+  pobierzFaktury(): Faktura[] {
     if(localStorage.getItem('faktury') === null) {
       this.faktury = [];
     } else {
@@ -25,7 +25,7 @@ export class DataService {
     return this.faktury;
   }
 
-  addTask(faktura: Faktura): void {
+  dodajFakture(faktura: Faktura): void {
     this.faktury.unshift(faktura);
 
     let faktury: Faktura[];
@@ -40,7 +40,7 @@ export class DataService {
     }
   }
 
-  removeTask(faktura: Faktura) {
+  usunFakture(faktura: Faktura) {
     for(let i = 0; i < this.faktury.length; i++) {
       if(faktura == this.faktury[i]) {
         this.faktury.splice(i, 1);

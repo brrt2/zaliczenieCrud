@@ -1,12 +1,13 @@
 <div class="">
   <div class="card">
       <div class="card-header">
-        <h2>{{ faktura.dataWystawienia }}</h2>
+        <h2>Sprzedawca: {{ faktura.sprzedawca }}</h2>
+        <h2>Data wystawienia: {{ faktura.dataWystawienia }}</h2>
         <div class="float-right">
             <a (click)="faktura.hide = !faktura.hide" href="#" class="btn btn-info">
-                {{ faktura.hide ? 'Rozwin' : 'Hide'}}
+                {{ faktura.hide ? 'Rozwin' : 'Zwin'}}
               </a>
-              <a href="#" (click)="removeTask(faktura)" class="btn btn-danger">
+              <a href="#" (click)="usunFakture(faktura)" class="btn btn-danger">
                 Usun
               </a>
               <a href="#" class="btn btn-danger">
@@ -15,7 +16,11 @@
         </div>
       </div>
       <div class="card-body" [hidden]="faktura.hide">
-        <p>{{ faktura.uwagi }}</p>
+          <p>Data platnosci: {{ faktura.dataPlatnosci }}</p>
+          <p>Forma platnosci: {{ faktura.formaPlatnosci }}</p>
+          <p>Klient: {{ faktura.klient }}</p>
+          <p>Nr faktury: {{ faktura.nrFaktury }}</p>
+        <p>Uwagi: {{ faktura.uwagi }}</p>
       </div>
   </div>
 </div>

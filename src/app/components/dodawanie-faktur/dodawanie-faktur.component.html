@@ -4,34 +4,34 @@
   Dodaj fakture
   </div>
   <div class="card-body">
-  <form (submit)="addTask()">
+  <form (submit)="dodajFakture()">
     <div class="form-group">
-      <label for = "dataWystawienia">Data wystawienia</label>
+      <label for = "dataWystawienia">Data wystawienia: </label>
       <input type="text" class="form-control" name="dataWystawienia" [(ngModel)]="dataWystawienia">
     </div>
     <div class="form-group">
-      <label for = "dataPlatnosci">Data platnosci</label>
+      <label for = "dataPlatnosci">Data platnosci: </label>
       <input type="text" class="form-control" name="dataPlatnosci" [(ngModel)]="dataPlatnosci">
     </div>
     <div class="form-group">
-      <label for = "formaPlatnosci">Forma platnosci</label>
+      <label for = "formaPlatnosci">Forma platnosci:</label>
       <input type="text" class="form-control" name="formaPlatnosci" [(ngModel)]="formaPlatnosci">
     </div>
     <div class="form-group">
-      <label for = "sprzedawca">Sprzedawca</label>
+      <label for = "sprzedawca">Sprzedawca: </label>
       <input type="text" class="form-control" name="sprzedawca" [(ngModel)]="sprzedawca">
     </div>
     <div class="form-group">
-      <label for = "klient">Klient </label>
+      <label for = "klient">Klient: </label>
       <input type="text" class="form-control" name="klient" [(ngModel)]="klient">
     </div>
     <div class="form-group">
-      <label for = "nrFaktury">Numer faktury </label>
+      <label for = "nrFaktury">Numer faktury: </label>
       <input type="text" class="form-control" name="nrFaktury" [(ngModel)]="nrFaktury">
     </div>
   
     <div class="form-group">
-      <label for = "uwagi">Uwagi </label>
+      <label for = "uwagi">Uwagi: </label>
       <input type="text" class="form-control" name="uwagi" [(ngModel)]="uwagi">
     </div>
   <input type="submit" value="Dodaj" class="btn btn-primary">

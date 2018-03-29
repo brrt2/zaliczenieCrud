@@ -16,11 +16,11 @@ export class ListaFakturComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.faktury = this.dataService.getTasks();
+    this.faktury = this.dataService.pobierzFaktury();
   }
 
-  addTask(faktura: Faktura) {
-    this.dataService.addTask(faktura);
+  dodajFakture(faktura: Faktura) {
+    this.dataService.dodajFakture(faktura);
   }
 
 }

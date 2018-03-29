@@ -22,7 +22,7 @@ export class DodawanieFakturComponent implements OnInit {
   ngOnInit() {
   }
 
-  addTask() {
+  dodajFakture() {
     this.fakturaAdded.emit({
       dataWystawienia: this.dataWystawienia,
       dataPlatnosci: this.dataPlatnosci,

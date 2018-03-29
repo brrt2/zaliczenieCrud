@@ -16,10 +16,10 @@ export class FakturaComponent implements OnInit {
   ngOnInit() {
   }
 
-  removeTask(faktura: Faktura) {
-    const response = confirm('Are you sure to delete it?');
+  usunFakture(faktura: Faktura) {
+    const response = confirm('Czy na pewno chcesz usunac te fakture ?');
     if(response ) {
-      this.dataService.removeTask(faktura);
+      this.dataService.usunFakture(faktura);
     }
   }
 }
