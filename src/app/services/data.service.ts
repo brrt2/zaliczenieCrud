@@ -1,10 +1,12 @@
 import { Injectable } from '@angular/core';
 
 import { Faktura } from '../models/Faktura';
+import { Klient } from '../models/Klient';
 
 @Injectable()
 export class DataService {
   faktury: Faktura[];
+  klienci: Klient[];
 
   constructor() {
     this.faktury = [
@@ -15,6 +17,8 @@ export class DataService {
       // }
     ]
   }
+
+  // Faktury
 
   pobierzFaktury(): Faktura[] {
     if(localStorage.getItem('faktury') === null) {
@@ -48,4 +52,42 @@ export class DataService {
       }
     }
   }
+
+
+// Klienci 
+
+  pobierzKlientow(): Klient[] {
+    if(localStorage.getItem('klienci') === null) {
+      this.klienci = [];
+    } else {
+      this.klienci = JSON.parse(localStorage.getItem('klienci'));
+    }
+    return this.klienci;
+  }
+
+  dodajKlienta(klient: Klient): void {
+    this.klienci.unshift(klient);
+    let klienci: Klient[];
+    if(localStorage.getItem('klienci') === null) {
+      klienci = [];
+      klienci.unshift(klient);
+      localStorage.setItem('klienci', JSON.stringify(klienci));
+    } else {
+      klienci = JSON.parse(localStorage.getItem('klienci'));
+      klienci.unshift(klient);
+      localStorage.setItem('klienci', JSON.stringify(klienci));
+    }
+  }
+
+  usunKlienta(klient: Klient) {
+    for(let i = 0; i < this.klienci.length; i++) {
+      if(klient == this.klienci[i]) {
+        this.klienci.splice(i, 1);
+        localStorage.setItem('klienci', JSON.stringify(this.klienci));
+      }
+    }
+  }
+
+
+
 }

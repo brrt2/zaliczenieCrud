@@ -9,10 +9,9 @@ import { DataService } from '../../services/data.service';
   styleUrls: ['./lista-faktur.component.css']
 })
 export class ListaFakturComponent implements OnInit {
-  faktury: Faktura[];
+faktury: Faktura[];
   
   constructor(public dataService: DataService) {
-    
   }
 
   ngOnInit() {

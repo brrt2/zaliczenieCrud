@@ -1,0 +1,9 @@
+<app-dodawanie-klientow (klientAdded)="dodajKlienta($event)"></app-dodawanie-klientow>
+
+<div class="container">
+  <app-faktura
+    class="col-md-4 m-2"
+    *ngFor="let klient of klienci"
+    [faktura]="klient">
+  </app-faktura>
+</div>

@@ -41,4 +41,5 @@ export class DodawanieFakturComponent implements OnInit {
     this.nrFaktury = 0;
     this.uwagi = '';
   }
+
 }

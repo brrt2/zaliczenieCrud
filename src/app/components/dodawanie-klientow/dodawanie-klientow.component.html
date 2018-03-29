@@ -1,0 +1,32 @@
+<div class="card">
+    <div class="card-header">
+    Dodaj klienta
+    </div>
+    <div class="card-body">
+    <form (submit)="dodajKlienta()">
+      <div class="form-group">
+        <label for = "nazwa">Nazwa: </label>
+        <input type="text" class="form-control" name="nazwa" [(ngModel)]="nazwa">
+      </div>
+      <div class="form-group">
+        <label for = "adres">Adres: </label>
+        <input type="text" class="form-control" name="adres" [(ngModel)]="adres">
+      </div>
+      <div class="form-group">
+        <label for = "miasto">Miasto :</label>
+        <input type="text" class="form-control" name="miasto" [(ngModel)]="miasto">
+      </div>
+      <div class="form-group">
+        <label for = "kodpocztowy">Kod pocztowy:  </label>
+        <input type="text" class="form-control" name="kodpocztowy" [(ngModel)]="kodpocztowy">
+      </div>
+      <div class="form-group">
+        <label for = "nip">Nip: </label>
+        <input type="text" class="form-control" name="nip" [(ngModel)]="nip">
+      </div>
+     
+    <input type="submit" value="Dodaj klienta" class="btn btn-primary">
+    </form>
+    </div>
+    
+    </div>

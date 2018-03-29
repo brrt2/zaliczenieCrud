@@ -1,0 +1,24 @@
+<div class="">
+    <div class="card">
+        <div class="card-header">
+          <h2>Nazwa: {{ klient.nazwa }}</h2>
+          <h2>Adres: {{ klient.dataWystawienia }}</h2>
+          <div class="float-left">
+              <a (click)="klient.hide = !klient.hide" href="#" class="btn btn-info">
+                  {{ klient.hide ? 'Rozwin' : 'Zwin'}}
+                </a>
+                <a href="#" (click)="usunKlienta(klient)" class="btn btn-danger">
+                  Usun
+                </a>
+                <a href="#"  class="btn btn-danger">
+                  Edytuj
+                </a>
+          </div>
+        </div>
+        <div class="card-body" [hidden]="klient.hide">
+            <p>Miasto: {{ klient.miasto }}</p>
+            <p>Kod pocztowy: {{ klient.kodpocztowy }}</p>
+            <p>Nip: {{ klient.nip }}</p>
+        </div>
+    </div>
+  </div>
